@@ -70,5 +70,5 @@ needed_data <- total_data[,c("Subject","Activity",needed_features)]
 
 molten_data <- melt(needed_data,id = c("Subject","Activity"))
 tidy_data <- dcast(molten_data,Subject+Activity~variable,mean)
-write.table(tidy_data,file = "tidy_data.txt")
+write.table(tidy_data,file = "tidy_data.txt",row.names = FALSE)
 
